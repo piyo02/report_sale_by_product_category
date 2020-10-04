@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+                id="action_so_report_by_prod_cat"
+                string="Report SO by Product Category"
+                model="sale.report"
+                report_type="qweb-pdf"
+                file="report_sale_by_product_category.report_so_by_prod_cat"
+                name="report_sale_by_product_category.report_so_by_prod_cat"
+        />
+    </data>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_report_by_prod_cat_form_view" model="ir.ui.view">
+            <field name="name">sale.report.prod.cat.form.view</field>
+            <field name="model">sale.report.prod.cat</field>
+            <field name="arch" type="xml">
+                <form string="Laporan Penjualan Per Kategori Produk">
+                    <group>
+                        <group>
+                            <field name="start_date"/>
+                        </group>
+                        <group>
+                            <field name="end_date"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button name="print_so_report_by_prod_cat" string="Print Report" class="oe_highlight"
+                                type="object"/>
+                        Or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+
+
+            </field>
+        </record>
+
+        <record id="action_sale_report_by_prod_cat_wizard" model="ir.actions.act_window">
+            <field name="name">Laporan Penjualan Per Kategori Produk</field>
+            <field name="res_model">sale.report.prod.cat</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_sale_report_by_prod_cat_wizard"
+                  name="Laporan Penjualan Per Kategori Produk"
+                  action="action_sale_report_by_prod_cat_wizard"
+                  parent="sales_team.menu_sale_report"
+                  sequence="10"/>
+    </data>
+</odoo>
